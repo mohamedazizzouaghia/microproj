@@ -1,0 +1,4 @@
+tn\esprit\espritconnect\apigateway\ApiGatewayApplication.class
+tn\esprit\espritconnect\apigateway\filter\AuthenticationFilter.class
+tn\esprit\espritconnect\apigateway\filter\JwtUtil.class
+tn\esprit\espritconnect\apigateway\filter\RouteValidator.class

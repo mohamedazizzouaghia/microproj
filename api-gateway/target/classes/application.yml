@@ -1,0 +1,102 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/users/**
+        - id: event-service
+          uri: lb://event-service
+          predicates:
+            - Path=/api/events/**
+        - id: reservation-service
+          uri: lb://reservation-service
+          predicates:
+            - Path=/api/reservations/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+        - id: club-service
+          uri: lb://club-service
+          predicates:
+            - Path=/api/clubs/**
+        - id: incident-service
+          uri: lb://incident-service
+          predicates:
+            - Path=/api/incidents/**
+        - id: openapi-user
+          uri: lb://user-service
+          predicates:
+            - Path=/v3/api-docs/user-service
+          filters:
+            - RewritePath=/v3/api-docs/(?<segment>.*), /v3/api-docs
+        - id: openapi-event
+          uri: lb://event-service
+          predicates:
+            - Path=/v3/api-docs/event-service
+          filters:
+            - RewritePath=/v3/api-docs/(?<segment>.*), /v3/api-docs
+        - id: openapi-reservation
+          uri: lb://reservation-service
+          predicates:
+            - Path=/v3/api-docs/reservation-service
+          filters:
+            - RewritePath=/v3/api-docs/(?<segment>.*), /v3/api-docs
+        - id: openapi-auth
+          uri: lb://auth-service
+          predicates:
+            - Path=/v3/api-docs/auth-service
+          filters:
+            - RewritePath=/v3/api-docs/(?<segment>.*), /v3/api-docs
+        - id: openapi-club
+          uri: lb://club-service
+          predicates:
+            - Path=/v3/api-docs/club-service
+          filters:
+            - RewritePath=/v3/api-docs/(?<segment>.*), /v3/api-docs
+        - id: openapi-incident
+          uri: lb://incident-service
+          predicates:
+            - Path=/v3/api-docs/incident-service
+          filters:
+            - RewritePath=/v3/api-docs/(?<segment>.*), /v3/api-docs
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: user-service
+        url: /v3/api-docs/user-service
+      - name: event-service
+        url: /v3/api-docs/event-service
+      - name: reservation-service
+        url: /v3/api-docs/reservation-service
+      - name: auth-service
+        url: /v3/api-docs/auth-service
+      - name: club-service
+        url: /v3/api-docs/club-service
+      - name: incident-service
+        url: /v3/api-docs/incident-service

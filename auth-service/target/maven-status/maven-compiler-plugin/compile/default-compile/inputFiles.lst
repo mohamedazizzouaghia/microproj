@@ -1,0 +1,11 @@
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\dto\AuthResponse.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\entity\User.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\controller\AuthController.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\service\CustomUserDetailsService.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\AuthServiceApplication.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\dto\LoginRequest.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\dto\RegisterRequest.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\util\JwtUtil.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\config\DataLoader.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\config\SecurityConfig.java
+C:\Users\aziz\Desktop\springproj\auth-service\src\main\java\tn\esprit\espritconnect\authservice\repository\UserRepository.java

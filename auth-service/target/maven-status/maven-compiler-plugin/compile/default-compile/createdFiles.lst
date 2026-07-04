@@ -1,0 +1,12 @@
+tn\esprit\espritconnect\authservice\util\JwtUtil.class
+tn\esprit\espritconnect\authservice\entity\User$UserBuilder.class
+tn\esprit\espritconnect\authservice\controller\AuthController.class
+tn\esprit\espritconnect\authservice\AuthServiceApplication.class
+tn\esprit\espritconnect\authservice\dto\RegisterRequest.class
+tn\esprit\espritconnect\authservice\config\SecurityConfig.class
+tn\esprit\espritconnect\authservice\service\CustomUserDetailsService.class
+tn\esprit\espritconnect\authservice\config\DataLoader.class
+tn\esprit\espritconnect\authservice\dto\AuthResponse.class
+tn\esprit\espritconnect\authservice\dto\LoginRequest.class
+tn\esprit\espritconnect\authservice\entity\User.class
+tn\esprit\espritconnect\authservice\repository\UserRepository.class
